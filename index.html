@@ -1,56 +1,390 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light"> <!-- Added 'light' class for initial theme -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deepika Wagadre | Web Developer</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepika Wagadre's Portfolio</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <button id="theme-toggle">Toggle Dark Mode</button>
+<body class="antialiased leading-normal tracking-wide bg-f0f4f8 text-gray-800 dark:bg-gray-900 dark:text-white">
 
-  <section class="hero">
-    <div class="content">
-      <img src="assets/deepika.jpg" alt="Deepika Wagadre" class="profile-img" />
-      <h1>Hi, I'm <span>Deepika Wagadre</span></h1>
-      <p>A passionate Web Developer</p>
-      <a href="assets/deepu_resume1.pdf" download class="btn">Download CV</a>
-    </div>
-  </section>
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 shadow-lg rounded-b-xl md:rounded-b-2xl">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Site Title/Logo -->
+            <a href="#" class="text-3xl font-bold mb-4 md:mb-0">
+                Deepika Wagadre
+            </a>
+            <!-- Navigation Menu and Dark Mode Toggle -->
+            <nav class="flex items-center space-x-6 md:space-x-8">
+                <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 text-lg">
+                    <li><a href="#about" class="hover:text-blue-200 transition duration-300 ease-in-out pb-1 border-b-2 border-transparent hover:border-blue-200">About</a></li>
+                    <li><a href="#skills" class="hover:text-blue-200 transition duration-300 ease-in-out pb-1 border-b-2 border-transparent hover:border-blue-200">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-blue-200 transition duration-300 ease-in-out pb-1 border-b-2 border-transparent hover:border-blue-200">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-blue-200 transition duration-300 ease-in-out pb-1 border-b-2 border-transparent hover:border-blue-200">Contact</a></li>
+                </ul>
+                <!-- Dark Mode Toggle Button -->
+                <button id="darkModeToggle" class="p-2 rounded-full bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300">
+                    <svg id="sunIcon" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12H2m15.325 3.325l-.707.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    <svg id="moonIcon" class="h-6 w-6 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm a passionate developer from Bhopal, currently pursuing MCA. I love building responsive web apps and exploring software development. Always excited to learn and grow.
-    </p>
-  </section>
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <span>Java (Core)</span>
-      <span>Spring Boot</span>
-      <span>HTML / CSS</span>
-      <span>JavaScript</span>
-      <span>DBMS</span>
-      <span>Python</span>
-      <span>DSA</span>
-      <span>OOP</span>
-    </div>
-  </section>
+        <!-- About Section -->
+        <section id="about" class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg mb-12 transform hover:scale-105 transition duration-300 ease-in-out">
+            <h2 class="text-4xl font-extrabold text-gray-800 dark:text-white mb-6 text-center">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                <!-- Profile Picture -->
+                <div class="flex-shrink-0">
+                    <img src="IMG_20250607_232844.jpg" alt="Deepika's Profile Picture" class="w-48 h-48 rounded-full object-cover shadow-md border-4 border-blue-300">
+                </div>
+                <!-- About Text -->
+                <div class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <p class="mb-4">
+                        Hello! My name is **Deepika Wagadre**, and I am currently pursuing my Master of Computer Applications (MCA) from **Lakshmi Narain College of Technology** in Bhopal. I consider myself a responsible and orderly person, eager for my first work experience.
+                    </p>
+                    <p class="mb-4">
+                        I am passionate about software development and web technologies, with hands-on experience in creating web projects and applications. My academic journey has equipped me with a strong foundation in various computing principles and practical skills, and I am eager to apply this knowledge to real-world challenges in a dynamic work environment.
+                    </p>
+                    <p class="mb-4">
+                        You can reach me via email at <a href="mailto:deepikawagadre749@gmail.com" class="text-blue-500 hover:underline">deepikawagadre749@gmail.com</a> or by phone at +91 79533265.
+                    </p>
+                    <p>
+                        When I'm not immersed in my studies or projects, you can find me enjoying coding, dancing, listening to music, and sketching. I'm always eager to learn and collaborate on exciting new ventures!
+                    </p>
+                    <!-- Resume Download Button -->
+                    <div class="mt-6 text-center md:text-left">
+                        <a href="deepu_resume1.pdf" download="Deepika_Wagadre_Resume.pdf"
+                           class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="contact">
-    <h2>Let's Connect</h2>
-    <div class="social-links">
-      <a href="mailto:deepikawagadre749@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/deepika-wagadre-9ba9082a3" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Deepikawagadre" target="_blank">GitHub</a>
-    </div>
-  </section>
+        <!-- Skills Section -->
+        <section id="skills" class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg mb-12 transform hover:scale-105 transition duration-300 ease-in-out">
+            <h2 class="text-4xl font-extrabold text-gray-800 dark:text-white mb-6 text-center">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-blue-100 dark:bg-blue-900 p-5 rounded-lg shadow-sm text-center transform hover:bg-blue-200 dark:hover:bg-blue-800 transition duration-200">
+                    <h3 class="text-xl font-semibold text-blue-700 dark:text-blue-300 mb-2">JAVA (Core)</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Strong foundational knowledge.</p>
+                </div>
+                <div class="bg-green-100 dark:bg-green-900 p-5 rounded-lg shadow-sm text-center transform hover:bg-green-200 dark:hover:bg-green-800 transition duration-200">
+                    <h3 class="text-xl font-semibold text-green-700 dark:text-green-300 mb-2">SpringBoot (Introductory)</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Basic understanding of framework.</p>
+                </div>
+                <div class="bg-yellow-100 dark:bg-yellow-900 p-5 rounded-lg shadow-sm text-center transform hover:bg-yellow-200 dark:hover:bg-yellow-800 transition duration-200">
+                    <h3 class="text-xl font-semibold text-yellow-700 dark:text-yellow-300 mb-2">Object Oriented Programming</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Proficient in OOP concepts.</p>
+                </div>
+                <div class="bg-red-100 dark:bg-red-900 p-5 rounded-lg shadow-sm text-center transform hover:bg-red-200 dark:hover:bg-red-800 transition duration-200">
+                    <h3 class="text-xl font-semibold text-red-700 dark:text-red-300 mb-2">Data Structures & Algorithms</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Problem-solving and efficient coding.</p>
+                </div>
+                <div class="bg-purple-100 dark:bg-purple-900 p-5 rounded-lg shadow-sm text-center transform hover:bg-purple-200 dark:hover:bg-purple-800 transition duration-200">
+                    <h3 class="text-xl font-semibold text-purple-700 dark:text-purple-300 mb-2">C</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Fundamental programming language.</p>
+                </div>
+                <div class="bg-indigo-100 dark:bg-indigo-900 p-5 rounded-lg shadow-sm text-center transform hover:bg-indigo-200 dark:hover:bg-indigo-800 transition duration-200">
+                    <h3 class="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">HTML & CSS</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Structuring and styling web content.</p>
+                </div>
+                <div class="bg-pink-100 dark:bg-pink-900 p-5 rounded-lg shadow-sm text-center transform hover:bg-pink-200 dark:hover:bg-pink-800 transition duration-200">
+                    <h3 class="text-xl font-semibold text-pink-700 dark:text-pink-300 mb-2">JavaScript</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Interactive web applications.</p>
+                </div>
+                <div class="bg-teal-100 dark:bg-teal-900 p-5 rounded-lg shadow-sm text-center transform hover:bg-teal-200 dark:hover:bg-teal-800 transition duration-200">
+                    <h3 class="text-xl font-semibold text-teal-700 dark:text-teal-300 mb-2">Python</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Scripting and backend development.</p>
+                </div>
+                <div class="bg-orange-100 dark:bg-orange-900 p-5 rounded-lg shadow-sm text-center transform hover:bg-orange-200 dark:hover:bg-orange-800 transition duration-200">
+                    <h3 class="text-xl font-semibold text-orange-700 dark:text-orange-300 mb-2">DBMS</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Database Management Systems.</p>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 Deepika Wagadre | Made with ❤️</p>
-  </footer>
+        <!-- Projects Section -->
+        <section id="projects" class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg mb-12 transform hover:scale-105 transition duration-300 ease-in-out">
+            <h2 class="text-4xl font-extrabold text-gray-800 dark:text-white mb-6 text-center">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card: Restaurant Billing System -->
+                <div class="bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg shadow-md overflow-hidden transform hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/bde0fe/4a5568?text=Restaurant+Billing" alt="Restaurant Billing System Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-3">Restaurant Billing System</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">
+                            Created a simple and efficient billing system for a restaurant using basic Java programming. Ensured proper calculation of order totals, taxes, and discounts. Designed a user-friendly interface for staff to manage billing operations smoothly.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-200 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Java</span>
+                            <span class="bg-red-200 text-red-800 text-sm font-medium px-3 py-1 rounded-full">Desktop Application</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-lg transition duration-200">
+                                View Project &rarr;
+                            </a>
+                            <a href="https://github.com/Deepikawagadre" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white text-sm flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.437 2.865 8.18 6.839 9.504.499.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.91.834.092-.647.35-1.089.636-1.337-2.22-.253-4.555-1.11-4.555-4.949 0-1.092.39-1.983 1.029-2.682-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.872c.85.004 1.702.113 2.509.325 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.203 2.398.098 2.65.64.699 1.029 1.59 1.029 2.682 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.337-.012 2.419-.012 2.747 0 .268.18.583.688.482C17.135 18.19 20 14.444 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card: Canteen Management System -->
+                <div class="bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg shadow-md overflow-hidden transform hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/bfd2ff/4a5568?text=Canteen+Management" alt="Canteen Management System Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-3">Canteen Management System</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">
+                            Built a secure and efficient backend using Java for data handling. Crafted a user-friendly frontend with HTML, CSS, and JavaScript. Streamlined canteen operations, including order processing, inventory management, and user interactions. Enhanced overall efficiency and user experience through intuitive design and reliable functionality.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-200 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Java Backend</span>
+                            <span class="bg-blue-200 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">HTML/CSS/JS</span>
+                            <span class="bg-green-200 text-green-800 text-sm font-medium px-3 py-1 rounded-full">DBMS</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-lg transition duration-200">
+                                View Project &rarr;
+                            </a>
+                            <a href="https://github.com/Deepikawagadre" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white text-sm flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.437 2.865 8.18 6.839 9.504.499.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.91.834.092-.647.35-1.089.636-1.337-2.22-.253-4.555-1.11-4.555-4.949 0-1.092.39-1.983 1.029-2.682-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.872c.85.004 1.702.113 2.509.325 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.203 2.398.098 2.65.64.699 1.029 1.59 1.029 2.682 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.337-.012 2.419-.012 2.747 0 .268.18.583.688.482C17.135 18.19 20 14.444 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card: Netflix-Clone -->
+                <div class="bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg shadow-md overflow-hidden transform hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/c7d2fe/4a5568?text=Netflix+Clone" alt="Netflix Clone Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-3">Netflix-Clone</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">
+                            Built a Netflix-like web application using HTML, CSS, and JavaScript. Used JavaScript to enhance interactivity and dynamic content display. Ensured mobile-friendly performance for seamless viewing across devices.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-pink-200 text-pink-800 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                            <span class="bg-cyan-200 text-cyan-800 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                            <span class="bg-lime-200 text-lime-800 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-lg transition duration-200">
+                                View Project &rarr;
+                            </a>
+                            <a href="https://github.com/Deepikawagadre" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white text-sm flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.437 2.865 8.18 6.839 9.504.499.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.91.834.092-.647.35-1.089.636-1.337-2.22-.253-4.555-1.11-4.555-4.949 0-1.092.39-1.983 1.029-2.682-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.872c.85.004 1.702.113 2.509.325 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.203 2.398.098 2.65.64.699 1.029 1.59 1.029 2.682 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.337-.012 2.419-.012 2.747 0 .268.18.583.688.482C17.135 18.19 20 14.444 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card: Landing Page (VPN) -->
+                <div class="bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg shadow-md overflow-hidden transform hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/cad2c5/4a5568?text=Landing+Page+VPN" alt="Landing Page VPN Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-3">Landing Page (VPN)</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">
+                            Built a Landing Page (VPN) using HTML, CSS, and Javascript. Ensured responsive design for seamless performance across devices like desktops, tablets, and mobiles.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-200 text-orange-800 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                            <span class="bg-teal-200 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                            <span class="bg-purple-200 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-lg transition duration-200">
+                                View Project &rarr;
+                            </a>
+                            <a href="https://github.com/Deepikawagadre" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white text-sm flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.437 2.865 8.18 6.839 9.504.499.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.91.834.092-.647.35-1.089.636-1.337-2.22-.253-4.555-1.11-4.555-4.949 0-1.092.39-1.983 1.029-2.682-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.872c.85.004 1.702.113 2.509.325 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.203 2.398.098 2.65.64.699 1.029 1.59 1.029 2.682 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.337-.012 2.419-.012 2.747 0 .268.18.583.688.482C17.135 18.19 20 14.444 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+            <h2 class="text-4xl font-extrabold text-gray-800 dark:text-white mb-6 text-center">Get In Touch</h2>
+            <div class="max-w-xl mx-auto">
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 text-center">
+                    Have a question or want to collaborate? Feel free to reach out! You can also connect with me via email at <a href="mailto:deepikawagadre749@gmail.com" class="text-blue-500 hover:underline">deepikawagadre749@gmail.com</a>.
+                </p>
+                <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Name:</label>
+                        <input type="text" id="name" name="name" required
+                               class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 dark:text-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Email:</label>
+                        <input type="email" id="email" name="_replyto" required
+                               class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 dark:text-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Message:</label>
+                        <textarea id="message" name="message" rows="6" required
+                                  class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 dark:text-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 resize-y"></textarea>
+                    </div>
+                    <div class="flex justify-center">
+                        <button type="submit"
+                                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-4 text-center">
+                    *This form uses <a href="https://formspree.io/" target="_blank" class="text-blue-500 hover:underline">Formspree.io</a> to handle submissions. Remember to replace `your_form_id` in the `action` attribute.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white p-6 mt-12 rounded-t-xl md:rounded-t-2xl">
+        <div class="container mx-auto text-center text-md">
+            <p>&copy; 2025 Deepika Wagadre. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://linkedin.com/in/deepika-wagadre-9ba9082a3" target="_blank" class="text-gray-300 hover:text-white transition duration-200">
+                    <!-- LinkedIn Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.338 5.758c-.092-.506-.514-.928-1.02-.928h-3.882V.833h-1.638v3.997H6.284V.833H4.646v3.997H.768v1.638h3.878v8.665h1.638V7.407h3.882v7.747h1.638v-7.747h3.882c.506 0 .928-.413.928-.928V6.686c0-.506-.413-.928-.928-.928zM16.338 5.758h-.001V5.758z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://github.com/Deepikawagadre" target="_blank" class="text-gray-300 hover:text-white transition duration-200">
+                    <!-- GitHub Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.437 2.865 8.18 6.839 9.504.499.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.91.834.092-.647.35-1.089.636-1.337-2.22-.253-4.555-1.11-4.555-4.949 0-1.092.39-1.983 1.029-2.682-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.872c.85.004 1.702.113 2.509.325 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.203 2.398.098 2.65.64.699 1.029 1.59 1.029 2.682 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.337-.012 2.419-.012 2.747 0 .268.18.583.688.482C17.135 18.19 20 14.444 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+            <h2 class="text-4xl font-extrabold text-gray-800 dark:text-white mb-6 text-center">Get In Touch</h2>
+            <div class="max-w-xl mx-auto">
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 text-center">
+                    Have a question or want to collaborate? Feel free to reach out! You can also connect with me via email at <a href="mailto:deepikawagadre749@gmail.com" class="text-blue-500 hover:underline">deepikawagadre749@gmail.com</a>.
+                </p>
+                <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Name:</label>
+                        <input type="text" id="name" name="name" required
+                               class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 dark:text-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Email:</label>
+                        <input type="email" id="email" name="_replyto" required
+                               class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 dark:text-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Message:</label>
+                        <textarea id="message" name="message" rows="6" required
+                                  class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 dark:text-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 resize-y"></textarea>
+                    </div>
+                    <div class="flex justify-center">
+                        <button type="submit"
+                                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-4 text-center">
+                    *This form uses <a href="https://formspree.io/" target="_blank" class="text-blue-500 hover:underline">Formspree.io</a> to handle submissions. Remember to replace `your_form_id` in the `action` attribute.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white p-6 mt-12 rounded-t-xl md:rounded-t-2xl">
+        <div class="container mx-auto text-center text-md">
+            <p>&copy; 2025 Deepika Wagadre. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://linkedin.com/in/deepika-wagadre-9ba9082a3" target="_blank" class="text-gray-300 hover:text-white transition duration-200">
+                    <!-- LinkedIn Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.338 5.758c-.092-.506-.514-.928-1.02-.928h-3.882V.833h-1.638v3.997H6.284V.833H4.646v3.997H.768v1.638h3.878v8.665h1.638V7.407h3.882v7.747h1.638v-7.747h3.882c.506 0 .928-.413.928-.928V6.686c0-.506-.413-.928-.928-.928zM16.338 5.758h-.001V5.758z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://github.com/Deepikawagadre" target="_blank" class="text-gray-300 hover:text-white transition duration-200">
+                    <!-- GitHub Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.437 2.865 8.18 6.839 9.504.499.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.91.834.092-.647.35-1.089.636-1.337-2.22-.253-4.555-1.11-4.555-4.949 0-1.092.39-1.983 1.029-2.682-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.872c.85.004 1.702.113 2.509.325 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.203 2.398.098 2.65.64.699 1.029 1.59 1.029 2.682 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.337-.012 2.419-.012 2.747 0 .268.18.583.688.482C17.135 18.19 20 14.444 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white p-6 mt-12 rounded-t-xl md:rounded-t-2xl">
+        <div class="container mx-auto text-center text-md">
+            <p>&copy; 2025 Deepika Wagadre. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://linkedin.com/in/deepika-wagadre-9ba9082a3" target="_blank" class="text-gray-300 hover:text-white transition duration-200">
+                    <!-- LinkedIn Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.338 5.758c-.092-.506-.514-.928-1.02-.928h-3.882V.833h-1.638v3.997H6.284V.833H4.646v3.997H.768v1.638h3.878v8.665h1.638V7.407h3.882v7.747h1.638v-7.747h3.882c.506 0 .928-.413.928-.928V6.686c0-.506-.413-.928-.928-.928zM16.338 5.758h-.001V5.758z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://github.com/Deepikawagadre" target="_blank" class="text-gray-300 hover:text-white transition duration-200">
+                    <!-- GitHub Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.437 2.865 8.18 6.839 9.504.499.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.91.834.092-.647.35-1.089.636-1.337-2.22-.253-4.555-1.11-4.555-4.949 0-1.092.39-1.983 1.029-2.682-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.872c.85.004 1.702.113 2.509.325 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.203 2.398.098 2.65.64.699 1.029 1.59 1.029 2.682 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.337-.012 2.419-.012 2.747 0 .268.18.583.688.482C17.135 18.19 20 14.444 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
